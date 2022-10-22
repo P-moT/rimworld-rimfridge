@@ -33,10 +33,10 @@
 		</statBases>
 		<size>(1,1)</size>
 		<comps>
-      <li Class="CompProperties_Power">
+    <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>70</basePowerConsumption>
-      </li>
+        <PowerConsumption>70</PowerConsumption>
+    </li>
 			<li Class="RimFridge.CompProperties_SecondLayer">
 				<graphicData>
 					<texPath>Building/Temperature/Fridge/WallSingleFridgeLid</texPath>
@@ -69,10 +69,10 @@
 		</statBases>
 		<size>(2,1)</size>
 		<comps>
-      <li Class="CompProperties_Power">
+    <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>100</basePowerConsumption>
-      </li>
+        <PowerConsumption>100</PowerConsumption>
+    </li>
 			<li Class="RimFridge.CompProperties_SecondLayer">
 				<graphicData>
 					<texPath>Building/Temperature/Fridge/WallDualFridgeLid</texPath>
