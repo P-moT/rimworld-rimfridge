@@ -2,6 +2,7 @@
 using UnityEngine;
 using Verse;
 
+
 namespace RimFridge
 {
     public class SettingsController : Mod
@@ -19,19 +20,19 @@ namespace RimFridge
             Text.Font = GameFont.Small;
             Widgets.Label(new Rect(0, 40, 300, 20), "Modify Base Power Requirement" + ":");
             Settings.PowerFactor.AsString = Widgets.TextField(new Rect(320, 40, 100, 20), Settings.PowerFactor.AsString);
-            if (Widgets.ButtonText(new Rect(320, 65, 100, 20), "Apply"))
-            {
-                if (Settings.PowerFactor.ValidateInput())
-                {
-                    GetSettings<Settings>().Write();
-                    Messages.Message("New Power Factor Applied", MessageTypeDefOf.PositiveEvent);
-                }
-            }
+            // if (Widgets.ButtonText(new Rect(320, 65, 100, 20), "Apply"))
+            // {
+            //     if (Settings.PowerFactor.ValidateInput())
+            //     {
+            //         GetSettings<Settings>().Write();
+            //         Messages.Message("New Power Factor Applied", MessageTypeDefOf.PositiveEvent);
+            //     }
+            // }
             Widgets.Label(new Rect(20, 100, 400, 30), "<new power usage> = <input value> * <original power usage>");
-            if (Current.Game != null)
-            {
-                RimFridgeSettingsUtil.ApplyFactor(Settings.PowerFactor.AsFloat);
-            }
+            // if (Current.Game != null)
+            // {
+            //     RimFridgeSettingsUtil.ApplyFactor(Settings.PowerFactor.AsFloat);
+            // }
             Widgets.CheckboxLabeled(new Rect(0, 140, 200, 30), "Act as Trade Beacon:", ref Settings.ActAsBeacon);
             GUI.EndGroup();
         }

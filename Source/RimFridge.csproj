@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Users\travis\Desktop\RimworldDebug\Mods\RimFridge\v1.2\Assemblies\</OutputPath>
+    <OutputPath>C:\Users\Tom\Desktop\RimworldDebug\Mods\RimFridge\v1.4\Assemblies\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -27,7 +27,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\Steam\steamapps\common\RimWorld\Mods\RimFridge\v1.3\Assemblies\</OutputPath>
+    <OutputPath>E:\SteamLibrary\steamapps\common\RimWorld\Mods\RimFridge\v1.4\Assemblies\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -35,7 +35,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Harmony2.2.2\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
