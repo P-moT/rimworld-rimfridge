@@ -24,11 +24,11 @@ namespace RimFridge
         //         {
         //             if (def.defName.StartsWith("RimFridge"))
         //             {
-        //                 CompProperties_Power power = def.GetCompProperties<CompProperties_Power>();
-        //                 if (power != null)
-        //                 {
-        //                     BaseEnergy.Add(def.defName, power.basePowerConsumption);
-        //                     FridgeDefs.Add(def.defName, def);
+                        // CompProperties_Power power = def.GetCompProperties<CompProperties_Power>();
+                        // if (power != null)
+                        // {
+                        //     BaseEnergy.Add(def.defName, power.basePowerConsumption);
+                        //     FridgeDefs.Add(def.defName, def);
         //                 }
         //             }
         //         }
