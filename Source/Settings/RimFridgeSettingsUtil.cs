@@ -39,6 +39,7 @@ namespace RimFridge
         public static void ApplyFactor(float newFactor)
         {
             //This function was rendered unusable by the 1.4 update. 
+            return;
         }
     }
 }
