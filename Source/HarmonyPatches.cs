@@ -56,7 +56,7 @@ namespace RimFridge
     {
         static void Postfix()
         {
-            RimFridgeSettingsUtil.ApplyFactor(Settings.PowerFactor.AsFloat);
+            // RimFridgeSettingsUtil.ApplyFactor(Settings.PowerFactor.AsFloat);
         }
     }
 
@@ -65,7 +65,7 @@ namespace RimFridge
     {
         static void Postfix()
         {
-            RimFridgeSettingsUtil.ApplyFactor(Settings.PowerFactor.AsFloat);
+            // RimFridgeSettingsUtil.ApplyFactor(Settings.PowerFactor.AsFloat);
         }
     }
 
