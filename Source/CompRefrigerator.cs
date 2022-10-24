@@ -157,16 +157,18 @@ namespace RimFridge
                     changeEnergy -= change * 1.25f;
                 }
                 powerMultiplier = change * -1f;
+                Verse.Log.Message(powerMultiplier.ToString());
             }
             // Like all refrigerators, the RimFridge is insulated.  It won't instantly drop to room-temp from loss of power and things inside
             // should be good through brief power interruptions.
             currentTemp += changetemperature;
             IntVec3 pos = position + IntVec3.North.RotatedBy(parent.Rotation);
             GenTemperature.PushHeat(pos, map, changeEnergy * 1.25f);
-            // if (powerTrader != null)
-            // {
-            //     powerTrader.PowerOutput = -((CompProperties_Power)powerTrader.props).basePowerConsumption * ((powerMultiplier * 0.9f) + 0.1f);
-            // }
+            if (powerTrader != null)
+            {
+                powerTrader.PowerOutput = -(((CompProperties_Power)powerTrader.props).PowerConsumption * ((powerMultiplier * 0.9f) + 0.1f)) * Settings.PowerFactor.AsFloat;
+            }
+            
         }
 
         private void CreateFixedStorageSettings()

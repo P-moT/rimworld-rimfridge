@@ -26,6 +26,7 @@ namespace RimFridge
                 {
                     GetSettings<Settings>().Write();
                     Messages.Message("New Power Factor Applied", MessageTypeDefOf.PositiveEvent);
+                    Messages.Message($"Power factor is now {Settings.PowerFactor.AsString}", MessageTypeDefOf.PositiveEvent);
                 }
             }
             Widgets.Label(new Rect(20, 100, 400, 30), "<new power usage> = <input value> * <default power usage>");

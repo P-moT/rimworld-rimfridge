@@ -25,6 +25,8 @@ namespace RimFridge
                     if (def.defName.StartsWith("RimFridge"))
                     {
                         var power = def.GetCompProperties<CompProperties_Power>();
+                        // Verse.Log.Message(def.defName);
+                        // Verse.Log.Message(power.PowerConsumption.ToString());
                         if (power != null)
                         {
                             BaseEnergy.Add(def.defName, power.PowerConsumption);
@@ -39,12 +41,12 @@ namespace RimFridge
         {
             CreateBaseEnergyMap();
 
-            foreach (KeyValuePair<string, float> basePower in BaseEnergy)
-            {
-                ThingDef def = FridgeDefs[basePower.Key];
-                var power = def.GetCompProperties<CompProperties_Power>();
-                power.PowerConsumption = basePower.Value * newFactor;
-            }
+            // foreach (KeyValuePair<string, float> basePower in BaseEnergy)
+            // {
+            //     ThingDef def = FridgeDefs[basePower.Key];
+            //     var power = CompRefrigerator.powerTrader.PowerOutput;
+                
+            // }
         }
     }
 }
