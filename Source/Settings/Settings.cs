@@ -20,15 +20,15 @@ namespace RimFridge
             Text.Font = GameFont.Small;
             Widgets.Label(new Rect(0, 40, 300, 20), "Modify Base Power Requirement" + ":");
             Settings.PowerFactor.AsString = Widgets.TextField(new Rect(320, 40, 100, 20), Settings.PowerFactor.AsString);
-            // if (Widgets.ButtonText(new Rect(320, 65, 100, 20), "Apply"))
-            // {
-            //     if (Settings.PowerFactor.ValidateInput())
-            //     {
-            //         GetSettings<Settings>().Write();
-            //         Messages.Message("New Power Factor Applied", MessageTypeDefOf.PositiveEvent);
-            //     }
-            // }
-            Widgets.Label(new Rect(20, 100, 400, 30), "<new power usage> = <input value> * <original power usage>");
+            if (Widgets.ButtonText(new Rect(320, 65, 100, 20), "Apply"))
+            {
+                if (Settings.PowerFactor.ValidateInput())
+                {
+                    GetSettings<Settings>().Write();
+                    Messages.Message("New Power Factor Applied", MessageTypeDefOf.PositiveEvent);
+                }
+            }
+            Widgets.Label(new Rect(20, 100, 400, 30), "<new power usage> = <input value> * <default power usage>");
             if (Current.Game != null)
             {
                 RimFridgeSettingsUtil.ApplyFactor(Settings.PowerFactor.AsFloat);

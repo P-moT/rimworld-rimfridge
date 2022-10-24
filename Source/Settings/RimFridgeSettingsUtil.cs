@@ -42,7 +42,7 @@ namespace RimFridge
             foreach (KeyValuePair<string, float> basePower in BaseEnergy)
             {
                 ThingDef def = FridgeDefs[basePower.Key];
-                CompProperties_Power power = def.GetCompProperties<CompProperties_Power>();
+                var power = def.GetCompProperties<CompProperties_Power>();
                 power.PowerConsumption = basePower.Value * newFactor;
             }
         }
