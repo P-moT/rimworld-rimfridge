@@ -25,7 +25,6 @@ namespace RimFridge
                 if (Settings.PowerFactor.ValidateInput())
                 {
                     GetSettings<Settings>().Write();
-                    Messages.Message("New Power Factor Applied", MessageTypeDefOf.PositiveEvent);
                     Messages.Message($"Power factor is now {Settings.PowerFactor.AsString}", MessageTypeDefOf.PositiveEvent);
                 }
             }

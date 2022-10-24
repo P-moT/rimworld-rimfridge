@@ -15,6 +15,7 @@ namespace RimFridge
         }
 
         private static void CreateBaseEnergyMap()
+        // Unsure if this is still necessary due to below message, keeping just in case.
         {
             if (BaseEnergy == null)
             {
@@ -25,8 +26,6 @@ namespace RimFridge
                     if (def.defName.StartsWith("RimFridge"))
                     {
                         var power = def.GetCompProperties<CompProperties_Power>();
-                        // Verse.Log.Message(def.defName);
-                        // Verse.Log.Message(power.PowerConsumption.ToString());
                         if (power != null)
                         {
                             BaseEnergy.Add(def.defName, power.PowerConsumption);
@@ -39,14 +38,7 @@ namespace RimFridge
 
         public static void ApplyFactor(float newFactor)
         {
-            CreateBaseEnergyMap();
-
-            // foreach (KeyValuePair<string, float> basePower in BaseEnergy)
-            // {
-            //     ThingDef def = FridgeDefs[basePower.Key];
-            //     var power = CompRefrigerator.powerTrader.PowerOutput;
-                
-            // }
+            //This function was rendered unusable by the 1.4 update. 
         }
     }
 }
